@@ -5,8 +5,8 @@
 
 node {
     def commitHash, commitHashShort, commitUrl, currentVersion
-    def project = "navikt"
-    def repo = ""
+    def project = "spacealien"
+    def repo = "react_jenkins_test"
     def committer, committerEmail, changelog, pom, releaseVersion, nextVersion // metadata
     //def mvnHome = tool "maven-3.3.9"
     //def mvn = "${mvnHome}/bin/mvn"
