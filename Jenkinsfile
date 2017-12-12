@@ -10,9 +10,6 @@ node {
     def committer, committerEmail, changelog, pom, releaseVersion, nextVersion // metadata
     //def mvnHome = tool "maven-3.3.9"
     //def mvn = "${mvnHome}/bin/mvn"
-    def bin = "usr/bin"
-    def npm = "${bin}/npm"
-    def node = "${bin}/node"
     def appConfig = "nais.yaml"
     //def dockerRepo = "docker.adeo.no:5000"
     def branch = "master"
@@ -39,16 +36,17 @@ node {
     }
 
     stage("Install") {
-        sh "${npm} install"
+        sh "npm install"
     }
 
     stage("Test") {
-        sh "${npm} test"
+        sh "npm test"
     }
 
     stage("Build") {
-        sh "${npm} build"
+        sh "npm build"
     }
+
 
     // stage("Build, test and install artifact") {
     //     sh "${mvn} clean install -Djava.io.tmpdir=/tmp/${repo} -B -e"
