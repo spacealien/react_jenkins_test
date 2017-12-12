@@ -19,7 +19,7 @@ node {
     //def groupId = "nais"
     //def environment = 't1'
     //def zone = 'fss'
-    d//ef namespace = 'default'
+    //def namespace = 'default'
 
     stage("Checkout") {
         cleanWs()
